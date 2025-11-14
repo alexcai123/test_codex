@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>宝可梦对战模拟</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header>
+      <h1>宝可梦对战模拟器</h1>
+      <p>选择你的宝可梦和技能，开始一场精彩的对战！</p>
+    </header>
+
+    <main>
+      <section class="selection-panel">
+        <div class="trainer" id="trainerA">
+          <h2>训练家 A</h2>
+          <label for="pokemonA">选择宝可梦</label>
+          <select id="pokemonA"></select>
+          <label for="moveA">选择技能</label>
+          <select id="moveA"></select>
+        </div>
+        <div class="trainer" id="trainerB">
+          <h2>训练家 B</h2>
+          <label for="pokemonB">选择宝可梦</label>
+          <select id="pokemonB"></select>
+          <label for="moveB">选择技能</label>
+          <select id="moveB"></select>
+        </div>
+      </section>
+
+      <section class="battle-panel">
+        <div class="hp-bar" data-trainer="A">
+          <span class="name"></span>
+          <div class="bar-container">
+            <div class="bar"></div>
+          </div>
+          <span class="value"></span>
+        </div>
+        <div class="hp-bar" data-trainer="B">
+          <span class="name"></span>
+          <div class="bar-container">
+            <div class="bar"></div>
+          </div>
+          <span class="value"></span>
+        </div>
+        <div class="actions">
+          <button id="startBattle">开始对战</button>
+          <button id="nextTurn" disabled>下一回合</button>
+          <button id="reset">重置</button>
+        </div>
+        <div class="turn-indicator">当前回合：<span id="turn">-</span></div>
+        <ol id="log" class="battle-log"></ol>
+      </section>
+    </main>
+
+    <footer>
+      <p>本应用仅用于学习目的，与任天堂或宝可梦官方无关。</p>
+    </footer>
+
+    <script src="app.js"></script>
+  </body>
+</html>
